@@ -10,14 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170607075808) do
-
-  create_table "shortners", force: :cascade do |t|
-    t.string   "shortened_url"
-    t.text     "actual_url"
-    t.integer  "http_status"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+ActiveRecord::Schema.define(version: 20_170_607_075_808) do
+  create_table 'shortners', force: :cascade do |t|
+    t.string   'shortened_url'
+    t.text     'actual_url'
+    t.integer  'http_status'
+    t.datetime 'created_at',    null: false
+    t.datetime 'updated_at',    null: false
   end
-
 end

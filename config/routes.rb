@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   get '/:link' => 'url#redirect'
   namespace :api do
-  	namespace :v1 do
-  		resources :shortner
-  	end
+    namespace :v1 do
+      resources :shortner
+    end
   end
 end

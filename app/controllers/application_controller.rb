@@ -3,10 +3,10 @@ class ApplicationController < ActionController::Base
   before_filter :set_base
 
   def set_base
-  	@base_url = request.protocol.to_s + request.host_with_port.to_s + "/"
+    @base_url = request.protocol.to_s + request.host_with_port.to_s + '/'
   end
 
   def not_found
-    raise ActionController::RoutingError.new('Not Found')
-  end 
+    raise ActionController::RoutingError, 'Not Found'
+  end
 end
