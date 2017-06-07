@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Actual Url</th>
+    <th>Shortened Url</th>
+  </tr>
+  <% @urls.each do |url| %>
+	  <tr>
+	    <td><%= link_to url.actual_url, url.actual_url, target: "_blank" %></td>
+	    <td><%= link_to @base_url+url.shortened_url, @base_url+url.shortened_url, target: "_blank" %></td>
+	  </tr>
+  <% end %>
+</table>
